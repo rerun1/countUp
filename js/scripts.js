@@ -13,15 +13,21 @@ var countUp = function(number1, number2) {
   totals.shift();
   totals.reverse();
 
-  return totals;
-
-}
-
-var error = function(totals) {
   if (totals.length === 0) {
-    return alert("Count to number is smaller than count by number, please enter a count to number that is larger than the number you would like to count by");
+    return totals = "error";
+  } else {
+    return totals;
   }
 }
+
+var errorReset = function(){
+  if (totals === "error") {
+    $("input#number1").val("");
+    $("input#number2").val("");
+    return $("ul#list").append("<li>Please pick a count to number that is larger than the count by number!</li>");
+  }
+}
+
 
 $(document).ready(function(){
 
@@ -37,7 +43,7 @@ $(document).ready(function(){
 
     console.log(totals);
 
-    error(totals);
+    errorReset();
 
     totals.forEach(function(total){
       $("ul#list").append("<li>" + total + "</li>");
