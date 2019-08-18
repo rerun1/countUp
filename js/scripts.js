@@ -9,7 +9,18 @@ var countUp = function(number1, number2) {
 
   totals = total.split(" ");
 
+  totals.reverse();
+  totals.shift();
+  totals.reverse();
+
   return totals;
+
+}
+
+var error = function(totals) {
+  if (totals.length === 0) {
+    return alert("Count to number is smaller than count by number, please enter a count to number that is larger than the number you would like to count by");
+  }
 }
 
 $(document).ready(function(){
@@ -18,6 +29,7 @@ $(document).ready(function(){
     event.preventDefault();
 
     $("ul#list").empty();
+
     number1 = parseInt($("input#number1").val());
     number2 = parseInt($("input#number2").val());
 
@@ -25,12 +37,10 @@ $(document).ready(function(){
 
     console.log(totals);
 
+    error(totals);
+
     totals.forEach(function(total){
-      if (total === "") {
-        $("ul#list").append();
-      } else {
-        $("ul#list").append("<li>" + total + "</li>");
-      }
+      $("ul#list").append("<li>" + total + "</li>");
     });
 
   });
