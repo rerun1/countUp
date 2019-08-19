@@ -12,19 +12,32 @@
   </head>
   <body>
     <div class="container">
-      <h1>Choose a number to count up by...</h1>
+      <h1 class="mt-2">Custom Counting Sequences</h1>
       <form id="numbers">
-        <div class="form-group form-inline">
-          <label for="number1" class="mr-1">Pick a number to count up by:</label>
-          <input class="hide" type="number" id="number1" min="1" required>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Count by:</span>
+          </div>
+          <input class="pl-1" type="number" id="number1" placeholder="Type the number the sequence will start at, and count up, in here" min="1" required>
         </div>
-        <div class="form-group form-inline">
-          <label for="number2" class="mr-1">Pick a number to stop at:</label>
-          <input class="hide" type="number" id="number2" min="1" required>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Count to:</span>
+          </div>
+          <input class="pl-1" type="number" id="number2" placeholder="Type the number the sequence will stop at here" min="1" required>
         </div>
-        <button type="submit" class="btn btn-primary">Count Up</button>
+        <div class="row buttonWidth m-0">
+          <div class="col m-0 p-0">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+              <button id="submitButton"class="btn btn-info" type="submit">Go!</button>
+              </div>
+              <label for="submitButton" class="form-control placeholderColor">Click <b><i>Go!</i></b> to create a list of the numbers in your custom counting up sequence</label>
+            </div>
+          </div>
+        </div>
       </form>
-      <div class="result">
+      <div id="result">
 
       </div>
     </div>
