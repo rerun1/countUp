@@ -14,32 +14,42 @@
     <div class="container">
       <h1 class="mt-2">Custom Counting Sequences</h1>
       <form id="numbers">
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Count by:</span>
+        <div class="row buttonGroupWidth m-0">
+          <div class="col m-0 p-0">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text spanWidth">Count by:</span>
+              </div>
+              <input class="pl-1" type="number" id="number1" placeholder="Starts & counts by..." min="1" required>
+            </div>
           </div>
-          <input class="pl-1" type="number" id="number1" placeholder="Type the number the sequence will start at, and count up, in here" min="1" required>
         </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Count to:</span>
+        <div class="row buttonGroupWidth m-0">
+          <div class="col m-0 p-0">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text spanWidth">Count to:</span>
+              </div>
+              <input class="pl-1" type="number" id="number2" placeholder="Stops at..." min="1" required>
+            </div>
           </div>
-          <input class="pl-1" type="number" id="number2" placeholder="Type the number the sequence will stop at here" min="1" required>
         </div>
-        <div class="row buttonWidth m-0">
+        <div class="row buttonGroupWidth m-0">
           <div class="col m-0 p-0">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
               <button id="submitButton"class="btn btn-info" type="submit">Go!</button>
               </div>
-              <label for="submitButton" class="form-control placeholderColor">Click <b><i>Go!</i></b> to create a list of the numbers in your custom counting up sequence</label>
+              <label for="submitButton" class="form-control placeholderColor">Create a list of the numbers in your custom counting up sequence</label>
             </div>
           </div>
         </div>
       </form>
-      <div id="result">
+      <h2 id="countStart" class="mt-1"></h2>
+      <ul id="result" class="mt-2">
 
-      </div>
+      </ul>
+      <h2 id="countEnd"></h2>
     </div>
   </body>
 </html>

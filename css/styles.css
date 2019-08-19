@@ -2,24 +2,38 @@ ul {
   list-style: none;
   margin-top: 1em;
 }
+h2 {
+  color: rgba(15,102,116,1.0);
+  font-size: 1em;
+}
+
 .red {
   color: red;
 }
-input {
-  width: 600px;
+.spanWidth {
+  width:100px;
 }
-span {
-  width: 100px;
-}
-button {
-  width: 100px;
-}
-.buttonWidth {
+.buttonGroupWidth {
   width: 700px;
 }
 .placeholderColor {
-  color: #6c757d;
+  cursor: pointer;
+  color: rgba(108,117,125,1.0);
+  background-color: rgba(54,206,230,0.25);
 }
-.form-control {
-  border: 0px solid #fff;
+.placeholderColor:hover {
+  background-color: rgba(54,206,230,0.125);
+  color: rgba(13,15,16,1.0);
+}
+ @media only screen and (max-width: 778px) {
+   .buttonGroupWidth {
+     width: 300px;
+   }
+   .placeholderColor {
+     background-color: rgba(54,206,230,0.0);
+     border: 0px solid rgba(255,255,255,1.0);
+   }
+   .placeholderColor:hover {
+     background-color: rgba(54,206,230,0.0);
+   }
 }
