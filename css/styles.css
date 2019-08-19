@@ -1,4 +1,7 @@
 ul {
-  /* list-style: none; */
+  list-style: none;
   margin-top: 1em;
+}
+.red {
+  color: red;
 }
